@@ -21,38 +21,6 @@ function start () {
   //four();
 }
 
-function one () {
-  // First, we have to find the element:
-  var one = document.getElementById('one');
-
-  // Next, we add an event listener to it:
-  one.addEventListener('mouseenter', setColour);
-
-  // Finally, we add one to make the colour white again
-  one.addEventListener('mouseleave', setWhite);
-}
-
-// CREATE FUNCTION two HERE
-function two () {
-  var two = document.getElementById('two');
-  two.addEventListener('mouseenter', setColour);
-  two.addEventListener('mouseleave', setWhite);
-}
-
-// CREATE FUNCTION three HERE
-function three () {
-  var three = document.getElementById('three');
-  three.addEventListener('mouseenter', setColour);
-  three.addEventListener('mouseleave', setWhite);
-}
-
-// CREATE FUNCTION four HERE
-function four () {
-  var four = document.getElementById('four');
-  four.addEventListener('click', setColour);
-  four.addEventListener('mouseleave', setWhite);
-}
-
 // Changes the background color of event's target
 function setColour (evt) {
   evt.target.style.backgroundColor = this.getAttribute("data-colour");
@@ -60,3 +28,35 @@ function setColour (evt) {
 function setWhite (evt) {
   evt.target.style.backgroundColor = 'white';
 }
+
+// function one () {
+  // // First, we have to find the element:
+  // var one = document.getElementById('one');
+
+  // // Next, we add an event listener to it:
+  // one.addEventListener('mouseenter', setColour);
+
+  // // Finally, we add one to make the colour white again
+  // one.addEventListener('mouseleave', setWhite);
+// }
+
+// // CREATE FUNCTION two HERE
+// function two () {
+  // var two = document.getElementById('two');
+  // two.addEventListener('mouseenter', setColour);
+  // two.addEventListener('mouseleave', setWhite);
+// }
+
+// // CREATE FUNCTION three HERE
+// function three () {
+  // var three = document.getElementById('three');
+  // three.addEventListener('mouseenter', setColour);
+  // three.addEventListener('mouseleave', setWhite);
+// }
+
+// // CREATE FUNCTION four HERE
+// function four () {
+  // var four = document.getElementById('four');
+  // four.addEventListener('click', setColour);
+  // four.addEventListener('mouseleave', setWhite);
+// }
