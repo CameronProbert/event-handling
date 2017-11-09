@@ -6,12 +6,19 @@ document.addEventListener('DOMContentLoaded', start)
 function start () {
   // The first example is done for you. This will change the background colour of the first div
   // when you mouse over it.
-  one();
+  var divs = document.getElementsByTagName('div')
+  for (var i = 0; i < divs.length-1; i++){
+    divs[i].addEventListener('mouseenter', setColour);
+    divs[i].addEventListener('mouseleave', setWhite);
+  }
+  divs[divs.length-1].addEventListener('click', setColour);
+  divs[divs.length-1].addEventListener('mouseleave', setWhite);
+  //one();
 
   // Your turn! Create a new function called `two`, then call it from here.
-  two();
-  three();
-  four();
+  //two();
+  //three();
+  //four();
 }
 
 function one () {
