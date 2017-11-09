@@ -7,11 +7,11 @@ function start () {
   // The first example is done for you. This will change the background colour of the first div
   // when you mouse over it.
   one();
+
+  // Your turn! Create a new function called `two`, then call it from here.
   two();
   three();
   four();
-
-  // Your turn! Create a new function called `two`, then call it from here.
 }
 
 function one () {
@@ -19,50 +19,37 @@ function one () {
   var one = document.getElementById('one');
 
   // Next, we add an event listener to it:
-  one.addEventListener('mouseenter', makeBlue);
+  one.addEventListener('mouseenter', setColour);
 
   // Finally, we add one to make the colour white again
-  one.addEventListener('mouseleave', makeWhite);
+  one.addEventListener('mouseleave', setWhite);
 }
 
 // CREATE FUNCTION two HERE
 function two () {
   var two = document.getElementById('two');
-  two.addEventListener('mouseenter', makeGreen);
-  two.addEventListener('mouseleave', makeWhite);
+  two.addEventListener('mouseenter', setColour);
+  two.addEventListener('mouseleave', setWhite);
 }
 
 // CREATE FUNCTION three HERE
 function three () {
   var three = document.getElementById('three');
-  three.addEventListener('mouseenter', makeOrange);
-  three.addEventListener('mouseleave', makeWhite);
+  three.addEventListener('mouseenter', setColour);
+  three.addEventListener('mouseleave', setWhite);
 }
 
 // CREATE FUNCTION four HERE
 function four () {
   var four = document.getElementById('four');
-  four.addEventListener('click', makeRed);
-  four.addEventListener('mouseleave', makeWhite);
+  four.addEventListener('click', setColour);
+  four.addEventListener('mouseleave', setWhite);
 }
 
 // Changes the background color of event's target
-function makeBlue (evt) {
-  evt.target.style.backgroundColor = 'blue';
+function setColour (evt) {
+  evt.target.style.backgroundColor = this.getAttribute("data-colour");
 }
-
-function makeGreen (evt) {
-  evt.target.style.backgroundColor = 'green';
-}
-
-function makeOrange (evt) {
-  evt.target.style.backgroundColor = 'orange';
-}
-
-function makeRed (evt) {
-  evt.target.style.backgroundColor = 'red';
-}
-
-function makeWhite (evt) {
+function setWhite (evt) {
   evt.target.style.backgroundColor = 'white';
 }
